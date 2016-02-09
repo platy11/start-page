@@ -1,6 +1,8 @@
 /* globals moment */
 
-setInterval(function() {
-	window.now = new Date();
-	document.querySelector('.time').innerText = moment().format('MMMM Do YYYY, h:mm a');
-}, 1500);
+window.onload = function(){
+	setInterval(function() {
+		window.now = moment();
+		document.querySelector('.time').textContent = moment().format('h:mm a,  Do MMMM YYYY');
+	}, 1500);
+}
